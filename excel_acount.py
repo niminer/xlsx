@@ -1,6 +1,5 @@
 from pypinyin import pinyin, lazy_pinyin, Style
 import xlrd
-import xlwt
 import xlsxwriter
 
 book = xlrd.open_workbook('开发区奎山街道小程序账号.xlsx')
@@ -11,7 +10,7 @@ print("{0} {1} {2}".format(sh.name, sh.nrows, sh.ncols))
 print("Cell D30 is {0}".format(sh.cell_value(rowx=2, colx=3)))
 expenses = []
 dup = {}
-offset = 1000000000000
+offset = 1000000000000000000
 for rx in range(sh.nrows):
     # print(sh.row(rx))
     init = sh.row_values(rx)
